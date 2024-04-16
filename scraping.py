@@ -20,3 +20,11 @@ def get_links(dom):
         if (href.startswith("http://") or href.startswith("https://")):
             links.append(href)
     return links
+
+
+def write_to_file(links):
+    links_json = json.dumps(links)
+    with open('links.json', 'w') as f:
+        f.write(links_json)
+
+    print("JSON sauvegardé dans le fichier 'links.json'")
