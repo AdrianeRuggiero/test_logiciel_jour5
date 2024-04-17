@@ -13,6 +13,7 @@ def get_dom(url):
     return BeautifulSoup(response.content, 'html.parser')
 
 
+# Gets all <a> tags
 def get_links(dom):
     links = []
     for link in dom.find_all('a'):
